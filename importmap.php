@@ -25,4 +25,16 @@ return [
     '@hotwired/turbo' => [
         'version' => '7.3.0',
     ],
+    'pin' => [
+        'version' => '0.3.0',
+    ],
+    '@stimulus-components/scroll-reveal' => [
+        'version' => '4.0.0',
+    ],
+    'request' => [
+        'version' => '2.9.202',
+    ],
+    'countup.js' => [
+        'version' => '2.8.0',
+    ],
 ];

@@ -34,4 +34,7 @@ return [
     'request' => [
         'version' => '2.9.202',
     ],
+    'countup.js' => [
+        'version' => '2.8.0',
+    ],
 ];

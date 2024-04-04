@@ -1,16 +1,20 @@
 import { Controller } from '@hotwired/stimulus';
+import { CountUp } from 'countup.js';
 
-/*
- * This is an example Stimulus controller!
- *
- * Any element with a data-controller="hello" attribute will cause
- * this controller to be executed. The name "hello" comes from the filename:
- * hello_controller.js -> "hello"
- *
- * Delete this file or adapt it for your use!
- */
 export default class extends Controller {
+    static targets = ["result"]
+    static values = {
+        start: Number,
+        end: Number,
+        duration: Number,
+        easing: Boolean,
+    }
+
     connect() {
-        this.element.textContent = 'Hello Stimulus! Edit me in assets/controllers/hello_controller.js';
+        let result = new CountUp(this.resultTarget, this.endValue, {
+            duration: this.durationValue,
+            useEasing: this.easingValue
+        });
+        result.start();
     }
 }
